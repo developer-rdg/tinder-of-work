@@ -6,7 +6,7 @@ const ChatScreen = () => {
   return (
     <SafeAreaView>
       <Header title="Chat" callEnabled />
-      <ChatList />
+      {/* <ChatList /> */}
     </SafeAreaView>
   )
 }
