@@ -7,35 +7,35 @@ import Swiper from 'react-native-deck-swiper';
 
 const DUMMY_DATA = [
   {
-    firstName: 'Steve ',
-    lastName: 'Smith',
-    job: 'Gamer',
-    photoURL: "https://images.pexels.com/photos/2102413/pexels-photo-2102413.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    age: 26,
+    firstName: 'Google',
+    lastName: 'California',
+    job: 'Front-end Developer React Native',
+    photoURL: "https://wallpapercave.com/wp/wp2860510.png",
+    age: 158,
     id: 123,
   },
   {
-    firstName: 'John',
-    lastName: 'Snow',
-    job: 'Soldier',
-    photoURL: "https://images.pexels.com/photos/7705906/pexels-photo-7705906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    age: 33,
+    firstName: 'Twitter',
+    lastName: 'Chicago',
+    job: 'Back-end Developer Node',
+    photoURL: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F09%2FTwitter.jpg%3Fquality%3D82%26strip%3Dall%26w%3D1600&f=1&nofb=1&ipt=e04c7cda05e3219cab2fb0900998fea7925527453b8576f26a2d6c3c319f9310&ipo=images",
+    age: 123,
     id: 456,
   },
   {
-    firstName: 'Sasha',
-    lastName: 'Ashley',
-    job: 'Streamer',
-    photoURL: "https://images.pexels.com/photos/3987028/pexels-photo-3987028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    age: 21,
+    firstName: 'Tesla',
+    lastName: 'Texas',
+    job: 'Full-Stack Developer Mobile Application',
+    photoURL: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogos-marques.com%2Fwp-content%2Fuploads%2F2021%2F02%2FTesla-Logo-1536x868.png&f=1&nofb=1&ipt=7ab80666bb818ff2482638a249021f47201a54a477331f3d8054b5421c363600&ipo=images",
+    age: 100,
     id: 789,
   },
   {
-    firstName: 'Sandra',
-    lastName: 'Silva',
-    job: 'HR',
-    photoURL: "https://images.pexels.com/photos/3987028/pexels-photo-3987028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    age: 33,
+    firstName: 'Reddit',
+    lastName: 'LDA',
+    job: 'Data Analysis',
+    photoURL: "https://cdn.technadu.com/wp-content/uploads/2019/12/Reddit-Logo.jpg",
+    age: 55,
     id: 789,
   },
 ]
@@ -60,7 +60,7 @@ const HomeScreen = () => {
     <SafeAreaView className="flex-1">
       {/* Header */}
       <View className="flex-row items-center relative justify-between px-5 py-3">
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Matched")}>
           <Image className="h-10 w-10 rounded-full" source={{ uri: 'https://avatars.githubusercontent.com/developer-rdg' }} />
         </TouchableOpacity>
         <TouchableOpacity className="" onPress={() => navigation.navigate("Modal")}>
@@ -128,7 +128,7 @@ const HomeScreen = () => {
                   </Text>
                   <Text>{card.job}</Text>
                 </View>
-                <Text className="text-2xl font-bold">{card.age}</Text>
+                <Text className="text-2xl font-bold">{card.age}K</Text>
               </View>
             </View>
           ) : (
